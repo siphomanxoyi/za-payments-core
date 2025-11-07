@@ -12,20 +12,8 @@
 	<artifactId>za-payments-core</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>za-payments-core</name>
-	<description>Demo project for Spring Boot</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+	<description>A Core Banking System</description>
+
 	<properties>
 		<java.version>17</java.version>
 	</properties>

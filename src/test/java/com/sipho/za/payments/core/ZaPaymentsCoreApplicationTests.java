@@ -1,4 +1,4 @@
-package com.sipho.za_payments_core;
+package com.sipho.za.payments.core;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

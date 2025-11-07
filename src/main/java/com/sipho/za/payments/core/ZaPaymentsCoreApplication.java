@@ -1,4 +1,4 @@
-package com.sipho.za_payments_core;
+package com.sipho.za.payments.core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

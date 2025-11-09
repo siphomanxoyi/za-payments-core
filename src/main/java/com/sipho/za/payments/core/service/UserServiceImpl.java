@@ -5,11 +5,13 @@ import com.sipho.za.payments.core.dto.UserRequest;
 import com.sipho.za.payments.core.mapper.UserMapper;
 import com.sipho.za.payments.core.model.User;
 import com.sipho.za.payments.core.repository.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final UserMapper userMapper;
@@ -28,7 +30,9 @@ public class UserServiceImpl implements UserService {
         if(existingUser.isPresent()) {
             throw new IllegalArgumentException("User with email " + userRequest.email() + " already exists");
         }
-        var savedEntity = userRepository.save(userMapper.toEntity(userRequest));
+        var entity = userMapper.toEntity(userRequest); // TODO: Encrypt password
+        log.debug("Creating user {}", entity);
+        var savedEntity = userRepository.save(entity);
         return userMapper.toDto(savedEntity);
     }
 }

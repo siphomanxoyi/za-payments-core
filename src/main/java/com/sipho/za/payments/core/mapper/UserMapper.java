@@ -25,7 +25,8 @@ public class UserMapper {
                 .role(Role.CUSTOMER) // TODO: Have more logic to determine role
                 .firstName(userRequest.firstName())
                 .lastName(userRequest.lastName())
-                .idNumber(userRequest.email())
+                .idNumber(userRequest.idNumber())
+                .password(userRequest.password())
                 .build();
     }
 }
